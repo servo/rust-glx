@@ -19,4 +19,10 @@
 extern crate gl_generator;
 
 /// GLX bindings
-generate_gl_bindings!("glx", "core", "1.4", "static", ["GLX_EXT_texture_from_pixmap"])
+generate_gl_bindings!{
+	api: "glx",
+	profile: "core",
+	version: "1.4",
+	generator: "static",
+	extensions: [ "GLX_EXT_texture_from_pixmap" ]
+}
