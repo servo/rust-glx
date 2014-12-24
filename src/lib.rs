@@ -8,23 +8,6 @@
 // except according to those terms.
 
 #![crate_name = "glx"]
-#![comment = "GLX 1.4 bindings"]
-#![license = "ASL2"]
 #![crate_type = "lib"]
 
-#![feature(phase)]
-#![feature(globs)]
-
-#[phase(plugin)]
-extern crate gl_generator;
-
-/// GLX bindings
-generate_gl_bindings! {
-    api: "glx",
-    profile: "core",
-    version: "1.4",
-    generator: "static",
-    extensions: [
-        "GLX_EXT_texture_from_pixmap"
-    ],
-}
+include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
