@@ -8,8 +8,6 @@
 // except according to those terms.
 
 #![crate_name = "glx"]
-#![comment = "GLX 1.4 bindings"]
-#![license = "ASL2"]
 #![crate_type = "lib"]
 
 include!(concat!(env!("OUT_DIR"), "/gl_bindings.rs"));
