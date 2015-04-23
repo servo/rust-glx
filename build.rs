@@ -1,13 +1,12 @@
-#![allow(unstable)]
-
 extern crate gl_generator;
 extern crate khronos_api;
 
-use std::os;
-use std::old_io::File;
+use std::env;
+use std::fs::File;
+use std::path::PathBuf;
 
 fn main() {
-    let dest = Path::new(os::getenv("OUT_DIR").unwrap());
+    let dest = PathBuf::from(env::var_os("OUT_DIR").unwrap());
 
     let mut file = File::create(&dest.join("gl_bindings.rs")).unwrap();
     gl_generator::generate_bindings(gl_generator::StaticGenerator,
