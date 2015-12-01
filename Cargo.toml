@@ -6,7 +6,7 @@ authors = ["Servo developers"]
 description = "GLX 1.4 bindings for Linux"
 documentation = "http://doc.servo.org/glx/"
 build = "build.rs"
-repository = "https://github.com/servo/rust-glx/"
+repository = "https://github.com/servo/rust-glx"
 
 [build-dependencies]
 gl_generator = "0.4"
